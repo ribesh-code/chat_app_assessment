@@ -1,9 +1,13 @@
 import 'package:chat_app_assessment/UI/pages/main_app.dart';
+import 'package:chat_app_assessment/UI/themes/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
   runApp(
-    const MyApp(),
+    const ProviderScope(
+      child: MyApp(),
+    ),
   );
 }
 
@@ -14,10 +18,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      title: 'Chat App',
+      theme: themeData(context),
+      debugShowCheckedModeBanner: false,
       home: const MainApp(),
     );
   }
