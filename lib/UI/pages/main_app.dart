@@ -5,6 +5,22 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        title: Text(
+          'Chats',
+          style: Theme.of(context).textTheme.headline1,
+        ),
+      ),
+      body: Center(
+        child: Text(
+          'Chat list',
+          style: Theme.of(context).textTheme.headline5?.copyWith(
+                color: Colors.black,
+              ),
+        ),
+      ),
+    );
   }
 }

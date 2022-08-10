@@ -6,4 +6,5 @@ class ColorTheme {
   static const int grayDark = 0xFF5D7989;
   static const int secondary = 0xFF1FA4B9;
   static const int background = 0xFFF8FCFF;
+  static const int danger = 0xFFFF8B8B;
 }
